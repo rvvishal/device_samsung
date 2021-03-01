@@ -78,5 +78,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Vendor Security Patch
+VENDOR_SECURITY_PATCH := 2020-12-01
+
 # VNDK
 BOARD_VNDK_VERSION := current

@@ -2,5 +2,5 @@
 <resources>
     <dimen name="rounded_corner_radius">100px</dimen>
     <dimen name="status_bar_height_landscape">24.0dip</dimen>
-    <dimen name="status_bar_height_portrait">83.0px</dimen>
+    <dimen name="status_bar_height_portrait">31.0dip</dimen>
 </resources>
