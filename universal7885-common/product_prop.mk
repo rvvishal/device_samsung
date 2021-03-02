@@ -54,6 +54,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.zram.first_wb_delay_mins=180 \
     ro.zram.periodic_wb_delay_hours=24
 
+# Security patch level
+ro.lineage.build.vendor_security_patch=2020-12-01
+
 # Zygote
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
