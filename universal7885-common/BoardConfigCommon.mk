@@ -34,7 +34,7 @@ BUILD_BROKEN_DUP_RULES := true
 TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 
 # Enable stats logging in LMKD
-TARGET_LMKD_STATS_LOG := true
+#TARGET_LMKD_STATS_LOG := true
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true

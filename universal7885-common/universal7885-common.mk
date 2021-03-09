@@ -20,8 +20,8 @@ TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # FastCharge
-PRODUCT_PACKAGES += \
-    lineage.fastcharge@1.0-service.samsung
+#PRODUCT_PACKAGES += \
+#    lineage.fastcharge@1.0-service.samsung
 
 # Init scripts
 PRODUCT_PACKAGES += \

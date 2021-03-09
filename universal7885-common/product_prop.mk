@@ -27,7 +27,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.latch_unsignaled=1
 
 # LMKD
-PRODUCT_PRODUCT_PROPERTIES += \
+#PRODUCT_PRODUCT_PROPERTIES += \
     ro.lmk.low=1001 \
     ro.lmk.medium=800 \
     ro.lmk.critical=0 \
