@@ -1,128 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2009, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds.  Do not translate. -->
+
 <resources>
-    <!-- Minimum screen brightness setting allowed by the power manager.
-         The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
-
-    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">true</bool>
-
-    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
-    <bool name="config_displayBlanksAfterDoze">true</bool>
-
-    <!-- If true, the doze component is not started until after the screen has been turned off
-         and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOffByDefault">false</bool>
-    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-    <bool name="config_dozeAlwaysOnEnabled">true</bool>
-    <bool name="config_dozePulsePickup">false</bool>
-
-    
-    <!-- The maximum range of gamma adjustment possible using the screen
-         auto-brightness adjustment setting. -->
-    <fraction name="config_autoBrightnessAdjustmentMaxGamma">300.0%</fraction>
-
-    <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
-  
-         This resource is similar to config_maximumScreenDimDuration but the maximum
-         screen dim duration is defined as a ratio of the overall screen off timeout
-         instead of as an absolute value in milliseconds.  This is useful for reducing
-         the dim duration when the screen off timeout is very short.
-    
-         When computing the screen dim duration, the power manager uses the lesser
-         of the effective durations expressed by config_maximumScreenDimDuration and
-         config_maximumScreenDimRatio.
-    
-         This value must be between 0% and 100%.  If the value is zero, the screen will not
-         dim before the device goes to sleep. -->
-    <fraction name="config_maximumScreenDimRatio">20.000004%</fraction>
-
-    <!-- Array of desired screen brightness in nits corresponding to the lux values
-         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
-         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
-         brightness of an all-white image.
-         If this is defined then:
-            - config_autoBrightnessLcdBacklightValues should not be defined
-            - config_screenBrightnessNits must be defined
-            - config_screenBrightnessBacklight must be defined
-         This array should have size one greater than the size of the config_autoBrightnessLevels
-         array. The brightness values must be non-negative and non-decreasing. This must be
-         overridden in platform specific overlays -->
-    <array name="config_autoBrightnessDisplayValuesNits">
-        <item>10</item>
-        <item>12</item>
-        <item>15</item>
-        <item>20</item>
-        <item>22.16</item>
-        <item>25.16</item>
-        <item>49.74</item>
-        <item>109.85</item>
-        <item>109.85</item>
-        <item>113</item>
-        <item>132</item>
-        <item>169.4</item>
-        <item>249.5</item>
-        <item>400</item>
-        <item>400</item>
-        <item>450</item>
-        <item>450</item>
-        <item>475</item>
-        <item>475</item>
-        <item>500</item>
-        <item>500</item>
-        <item>525</item>
-        <item>525</item>
-        <item>550</item>
-        <item>550</item>
-        <item>575</item>
-        <item>575</item>
-        <item>600</item>
-        <item>600</item>
-        <item>625</item>
-        <item>625</item>
-        <item>650</item>
-        <item>650</item>
-        <item>675</item>
-        <item>675</item>
-        <item>700</item>
-    </array>
-
-    <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>6</item>
-        <item>6</item>
-        <item>6</item>
-        <item>11</item>
-        <item>79</item>
-        <item>95</item>
-        <item>141</item>
-        <item>183</item>
-        <item>200</item>
-        <item>219</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-    </integer-array>
-
-    <!-- Array of output values for LCD backlight corresponding to the LUX values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>6</item>
-        <item>6</item>
-        <item>6</item>
-        <item>11</item>
-        <item>79</item>
-        <item>95</item>
-        <item>141</item>
-        <item>183</item>
-        <item>200</item>
-        <item>219</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-    </integer-array>
-	
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
@@ -136,32 +34,20 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
          Example for a 10dp x 10dp square top-center cutout:
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
-         @see https://www.w3.org/TR/SVG/paths.html#PathData -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -67.42857142857143 V 30.85714285714286 H 67.42857142857143 V 0 H 0 Z @dp</string>	
+         @see https://www.w3.org/TR/SVG/paths.html#PathData
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -67.42857142857143 V 30.85714285714286 H 67.42857142857143 V 0 H 0 Z @dp</string>
 
-    <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
-         The N entries of this array define N  1 zones as follows:
-         Zone 0:        0 <= LUX < array[0]
-         Zone 1:        array[0] <= LUX < array[1]
-         ...
-         Zone N:        array[N - 1] <= LUX < array[N]
-         Zone N + 1     array[N] <= LUX < infinity
-         Must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>5</item>
-        <item>6</item>
-        <item>50</item>
-        <item>100</item>
-        <item>500</item>
-        <item>1500</item>
-        <item>3000</item>
-        <item>4999</item>
-        <item>5000</item>
-        <item>19999</item>
-        <item>20000</item>
-    </integer-array>
+    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
+     <bool name="config_displayBlanksAfterDoze">false</bool>
 
-    <bool name="config_supportDoubleTapWake">false</bool>
+    <!-- If true, the doze component is not started until after the screen has been turned off
+         and the screen off animation has been performed. -->
+     <bool name="config_dozeAfterScreenOffByDefault">false</bool>
+     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+     <bool name="config_dozeAlwaysOnEnabled">true</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+     <bool name="config_enableBurnInProtection">true</bool>
 
 </resources>

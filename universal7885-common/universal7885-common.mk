@@ -1,9 +1,11 @@
+DEVICE_PATH := device/samsung/a10
+
 # Call proprietary blob setup
-$(call inherit-product-if-exists, vendor/samsung/universal7885-common/universal7885-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/exynos7885/exynos7885-vendor.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
@@ -16,8 +18,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1520
+TARGET_SCREEN_WIDTH := 720
 
 # FastCharge
 #PRODUCT_PACKAGES += \
@@ -52,7 +54,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.software.controls.xml:system/etc/permissions/android.software.controls.xml
 
@@ -80,6 +81,11 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Spectrum files
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/spectrum/init.spectrum.rc:$(TARGET_COPY_OUT_ROOT)/init.spectrum.rc \
+    $(DEVICE_PATH)/spectrum/init.spectrum.sh:$(TARGET_COPY_OUT_ROOT)/init.spectrum.sh
 
 # System properties
 -include $(LOCAL_PATH)/product_prop.mk

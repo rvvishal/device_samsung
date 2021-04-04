@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2019 The Android Open Source Project
+  ~ Copyright (C) 2018 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -14,11 +14,9 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<!-- These resources are around just to allow their values to be customized -->
-<resources>
-    <!-- Threshold in micro watts below which a charger is rated as "slow"; 1A @ 5V -->
-    <integer name="config_chargingSlowlyThreshold">5000000</integer>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Threshold in micro watts above which a charger is rated as "fast"; 3A @ 5V  -->
-    <integer name="config_chargingFastThreshold">15000000</integer>
+    <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that masks the display cutout, i.e. it shrinks the display such that the display cutout is no longer visible.-->
+    <string name="display_cutout_emulation_overlay">Hide</string>
+
 </resources>

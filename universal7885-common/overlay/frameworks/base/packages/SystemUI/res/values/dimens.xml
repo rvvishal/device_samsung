@@ -16,5 +16,17 @@
 */
 -->
 <resources>
-    <dimen name="rounded_corner_content_padding">48px</dimen>
+    <!-- Adjust the icon padding in status bar for rounded corners --> 
+    <dimen name="rounded_corner_content_padding">28px</dimen>
+
+    <!-- Spacing after the wifi signals that is present if there are any icons following it. -->
+    <dimen name="status_bar_wifi_signal_spacer_width">2.5dp</dimen>
+
+    <!-- The height of the container that holds the battery and time in the quick settings header.
+         -->
+    <dimen name="qs_header_system_icons_area_height">30dp</dimen>
+
+    <dimen name="qs_header_tooltip_height">48dp</dimen>
+
+    <dimen name="qs_detail_items_padding_top">4dp</dimen>
 </resources>
