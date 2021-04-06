@@ -14,8 +14,8 @@ SAKURA_GAPPS := false
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# Set bootanimation resolution to 1080p
-TARGET_BOOT_ANIMATION_RES := 1080
+# Set bootanimation resolution to 7200p
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Use OnePlus launcher
 SAKURA_OPLAUNCHER := true

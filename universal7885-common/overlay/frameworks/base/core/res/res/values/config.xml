@@ -172,7 +172,7 @@
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4</item>
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
-    <integer name="config_shutdownBatteryTemperature">680</integer>
+    <integer name="config_shutdownBatteryTemperature">500</integer>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
@@ -516,7 +516,7 @@
         <item>253</item>
         <item>254</item>
         <item>255</item>
-        <item>306</item>
+        <item>355</item>
     </integer-array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
@@ -526,12 +526,12 @@
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
+        <item>0.5</item>
+        <item>1</item>
+        <item>1.5</item>
         <item>2</item>
-        <item>2.2</item>
         <item>2.3</item>
-        <item>2.5</item>
         <item>2.6</item>
-        <item>2.8</item>
         <item>2.9</item>
         <item>3</item>
         <item>3.2</item>
@@ -782,7 +782,7 @@
         <item>398</item>
         <item>399</item>
         <item>420</item>
-        <item>500</item>
+        <item>560</item>
     </array>
     <array name="config_screenBrightnessRangeForClearView" />
     <integer-array name="config_screenDarkeningThresholds">
