@@ -24,7 +24,7 @@
     <bool name="doze_display_state_supported">true</bool>
 
     <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
-    <bool name="doze_suspend_display_state_supported">true</bool>
+    <bool name="doze_suspend_display_state_supported">false</bool>
 
     <!-- The CPU temperature sensor path, defaults to empty -->
     <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
@@ -32,12 +32,9 @@
     <!-- The CPU temperature divider, if needed -->
     <integer name="config_cpuTempDivider" translatable="false">1000</integer>
 
-    <!-- Smart Charging -->
-    <bool name="config_supportSmartCharging">true</bool>
-
-   <!-- How many icons may be shown at once in the system bar. Includes any
+    <!-- How many icons may be shown at once in the system bar. Includes any
          slots that may be reused for things like IME control. -->
-   <integer name="config_maxNotificationIcons">7</integer>
+    <integer name="config_maxNotificationIcons">7</integer>
 
     <!-- The default tiles to display in QuickSettings -->
     <string name="quick_settings_tiles_default" translatable="false">
