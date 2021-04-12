@@ -53,6 +53,9 @@
     <!-- If true, the display will be shifted around in ambient mode. -->
      <bool name="config_enableBurnInProtection">true</bool>
 
+    <!-- If supported, are dreams enabled? (by default) -->
+    <bool name="config_dreamsEnabledByDefault">false/bool>
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
@@ -66,4 +69,10 @@
 
     <!-- Specify if the fingerprint hardware support gestures-->
     <bool name="config_fingerprintSupportsGestures">true</bool>
+
+    <!-- True if the device supports system navigation keys. -->
+    <bool name="config_supportSystemNavigationKeys">true</bool>
+
+    <!-- Limit for the number of face templates per user -->
+    <integer name="config_faceMaxTemplatesPerUser">2</integer>
 </resources>
