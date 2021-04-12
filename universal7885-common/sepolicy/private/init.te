@@ -1,1 +1,3 @@
 allow init vendor_overlay_file:dir mounton;
+# Smart Charging
+allow init sysfs_batteryinfo:file { setattr };
