@@ -54,7 +54,7 @@
      <bool name="config_enableBurnInProtection">true</bool>
 
     <!-- If supported, are dreams enabled? (by default) -->
-    <bool name="config_dreamsEnabledByDefault">false/bool>
+    <bool name="config_dreamsEnabledByDefault">false</bool>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
