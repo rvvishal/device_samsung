@@ -57,8 +57,8 @@ TARGET_KERNEL_ARCH := arm64
 #KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 BOARD_KERNEL_SEPARATED_DTBO := true
 #TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_PREBUILT_KERNEL := device/samsung/a20/prebuilt/Image
-BOARD_PREBUILT_DTBOIMAGE := device/samsung/a20/prebuilt/dtbo.img
+TARGET_PREBUILT_KERNEL := device/samsung/a10/prebuilt/Image
+BOARD_PREBUILT_DTBOIMAGE := device/samsung/a10/prebuilt/dtbo.img
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
@@ -83,7 +83,11 @@ SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Vendor Security Patch
-VENDOR_SECURITY_PATCH := 2020-12-01
+VENDOR_SECURITY_PATCH := 2021-02-05
+
+# Lineage hardware
+BOARD_HARDWARE_CLASS := \
+    hardware/samsung/lineagehw
 
 # VNDK
 BOARD_VNDK_VERSION := current
