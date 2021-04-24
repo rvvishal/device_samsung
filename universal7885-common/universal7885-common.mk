@@ -62,6 +62,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.universal7885
 
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    GCamGo \
+    GalleryGo
+
 # Recovery
 PRODUCT_PACKAGES += \
     fastbootd \
