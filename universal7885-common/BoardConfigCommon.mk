@@ -57,8 +57,8 @@ TARGET_KERNEL_ARCH := arm64
 #KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 BOARD_KERNEL_SEPARATED_DTBO := true
 #TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_PREBUILT_KERNEL := device/samsung/a10/prebuilt/Image
-BOARD_PREBUILT_DTBOIMAGE := device/samsung/a10/prebuilt/dtbo.img
+TARGET_PREBUILT_KERNEL := device/samsung/a20e/prebuilt/Image
+BOARD_PREBUILT_DTBOIMAGE := device/samsung/a20e/prebuilt/dtbo.img
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
