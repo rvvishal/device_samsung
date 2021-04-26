@@ -1,4 +1,4 @@
-$(call inherit-product, device/samsung/a20/full_a20e.mk)
+$(call inherit-product, device/samsung/a20e/full_a20e.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
